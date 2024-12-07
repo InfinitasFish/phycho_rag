@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{fontspec} % For font customization
+\usepackage{polyglossia} % Multilingual support
+\usepackage{hyperref} % Support for hyperlinks and \href
+\usepackage{soul} % Support for strikethrough (\st)
+\usepackage{graphicx} % Support for including images
+\usepackage[a4paper, margin=2.5cm]{geometry} % Page layout with custom margins
+
+\setmainfont{DejaVu Serif} % Main font for body text
+\newfontfamily\cyrillicfonttt{DejaVu Sans Mono} % Monospace font with Cyrillic support
+\setdefaultlanguage{russian} % Set default language to Russian
+\setotherlanguage{english} % Secondary language is English
+
+\sloppy % Relax line-breaking rules to prevent overfull boxes
+
+% Redefine \textsuperscript to avoid conflicts
+\renewcommand{\textsuperscript}[1]{\raisebox{0.5ex}{#1}}
+
+% Prevent potential errors caused by undefined commands
+\providecommand{\tightlist}{\itemsep1pt\parskip0pt\parsep0pt}
+
+% Handle Pandoc-specific \pandocbounded command gracefully
+\providecommand{\pandocbounded}[1]{#1}
+
+% Handle empty sections gracefully
+\makeatletter
+\renewcommand\@seccntformat[1]{%
+  \ifnum\expandafter\@nameuse{r@#1}>\z@%
+    \csname the#1\endcsname\quad
+  \else
+    % Skip empty sections
+  \fi
+}
+\makeatother
+
+% Prevent list errors when \item is missing
+\newenvironment{tightitemize}%
+{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+{\end{itemize}}
+
+\begin{document}
+$body$
+\end{document}
