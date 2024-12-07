@@ -191,41 +191,6 @@ def save_articles_to_json(articles, json_filename):
         json.dump(articles, json_file, ensure_ascii=False, indent=4)
 
 
-def json_to_pdf(json_data, pdf_filename):
-    # Создаем PDF документ
-    c = canvas.Canvas(pdf_filename, pagesize=letter)
-    width, height = letter
-
-    # Устанавливаем начальные координаты
-    x = 50
-    y = height - 50
-
-    # Заголовок
-    c.setFont("Helvetica-Bold", 16)
-    c.drawString(x, y, "JSON Data")
-    y -= 30  # Переход на следующую строку
-
-    # Устанавливаем шрифт для содержимого
-    c.setFont("Helvetica", 12)
-
-    # Преобразуем JSON в строку и разбиваем на строки
-    json_string = json.dumps(json_data, indent=4, ensure_ascii=False)
-    lines = json_string.splitlines()
-
-    # Записываем строки в PDF
-    for line in lines:
-        c.drawString(x, y, line)
-        y -= 15  # Переход на следующую строку
-        if y < 50:  # Если достигли нижней границы страницы, добавляем новую страницу
-            c.showPage()
-            c.setFont("Helvetica", 12)
-            y = height - 50
-
-    # Сохраняем PDF файл
-    c.save()
-
-
-
 def main():
     base_url = "https://zigmund.online/journal/"
     all_links = get_all_articles_with_scroll_and_click(base_url)
@@ -243,15 +208,8 @@ def main():
     os.makedirs('./data/articles/parsed_articles/', exist_ok=True)
     for article in all_articles:
         title = clean_text(article["title"]).replace(" ", "_")
-        save_articles_to_json(article, f'./articles/parsed_articles/{title}.json')
-
-        # with open(
-        #     f'./articles/parsed_articles/{title}.json',
-        #     'r',
-        #     encoding='utf-8',
-        # ) as file:
-        #     data = json.load(file)
-        #     json_to_pdf(data, f'./articles/parsed_articles/{title}.pdf')
+        path = os.path.join('./articles/parsed_articles/', f'{title}.json')
+        save_articles_to_json(article, path)
 
 
 if __name__ == "__main__":
