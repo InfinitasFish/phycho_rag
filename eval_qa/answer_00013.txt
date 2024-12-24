@@ -1,0 +1,19 @@
+I agree that laziness isn't a definable thing. There's some underlying explanation, which is usually more sympathetic--they are tired, or demoralized, or have executive functioning problems.  That said, one way ADHD often departs from traditional perceptions of "laziness" is that many of us often procrastinate even on enjoyable things. I'll be lying in bed, desperately trying to convince myself to just walk into the kitchen and grab a slice of pizza because I'm really hungry, and it's like in the Sims when things keep disappearing from your action queue with no explanation.
+
+Laziness is not a great way of describing behavior. It's not specific enough to allow for fixing the problem. Sometimes "lazy" people are task avoidant and sometimes they are just trying to be efficient without understanding the hidden costs of their plans.
+
+Laziness is a value judgment and a cultural pejorative used to induce shame in other people (or sometimes ourselves) when we think that someone is not working as hard as they should be according to whatever assumptions we hold.
+
+At best, calling someone lazy is used to coerce an individual into action when they are otherwise feeling unmotivated to do so. Which is still a psychologically harmful thing to do. There are much better ways to encourage motivation in people than through shame, which over time teaches the person to devalue their self unless they are consistently working “hard enough”.
+
+Task avoidance happens with everyone, including those diagnosed with ADHD. It is not unique to the disorder, and engaging in task avoidance is not necessarily indicative of ADHD.
+
+Compared to those with normative levels of trait impulsivity, individuals with high trait impulsivity often struggle with 1) Sustained Attention and 2) Alerting. Neither of these aspects of attention have anything to do with the concept of laziness or not working “hard enough”. Individuals with ADHD have a more difficult time maintaining focus on relevant stimuli over a prolonged period of time, especially when fatigued. Because of this, they are more likely to shift their attention to task-irrelevant stimuli.
+
+Individuals with ADHD also have more difficulty with Alerting, which is the brain’s ability to recognize relevant attentional cues and redirect attention accordingly. For example, if a student is zoned out and suddenly the teacher says “And THIS slide will be on the next exam,” alerting is the brain’s ability to subconsciously recognize information that is relevant to success or survival, and direct conscious attention toward that stimuli, making the student perk up and tune into what the teacher is saying in the moment.
+
+So not only are individuals with ADHD more likely to shift focus away from task-relevant stimuli over time (especially when tired), their brains are also less likely to tune back in to the task through Alerting processes when prompted by environmental cues. This makes returning to the relevant task less likely in the long run.
+
+Behaviorally, these two specific attentional deficits can lead to cycles of avoidant behavior that have nothing to do with will power or not working “hard enough”. The pattern of shifting to task-irrelevant stimuli can be further reinforced through operant conditioning if the task-relevant stimuli is particularly unpleasant (i.e., negative reinforcement occurs when avoided) or if the task-irrelevant stimuli is particularly pleasant (i.e., positive reinforcement occurs when initiated).
+
+So behavioral psychology doesn’t use the term laziness at all
