@@ -20,7 +20,8 @@ conn.commit()
 # Initialize the PsychoRag system
 VECTOR_DB_PATHS = {
     "transcriptions": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/transcriptions_db_2",
-    "books": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/books_db_2" # дальше добавить папочку с статьями!!!
+    "books": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/books_db_2",
+     "articles": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/articles_db"
 }
 
 psycho_rag = PsychoRag(vector_db_paths=VECTOR_DB_PATHS)

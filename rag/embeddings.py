@@ -1,5 +1,5 @@
 import os
-from langchain.document_loaders import TextLoader
+from langchain.document_loaders import TextLoader, JSONLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -10,7 +10,7 @@ from itertools import islice
 DATA_PATHS = {
     "transcriptions": "/Users/dtikhanovskii/Documents/phycho_rag/data/videos",
     "books": "/Users/dtikhanovskii/Documents/phycho_rag/data/books/books",
-    "articles": "data/articles/"
+    "articles": "/Users/dtikhanovskii/Documents/phycho_rag/data/articles/articles"
 }
 
 DB_PATHS = {
@@ -33,7 +33,7 @@ def batch_process(data, batch_size):
     for i in range(0, len(data), batch_size):
         yield data[i:i + batch_size]
 
-def create_embeddings_for_dataset(name, loader_cls):
+def create_embeddings_for_dataset(name, loader_cls, jq_schema=None):
     print(f"Processing {name} dataset...")
     documents = []
     errors = []
@@ -45,7 +45,7 @@ def create_embeddings_for_dataset(name, loader_cls):
                 continue
             file_full_path = os.path.join(DATA_PATHS[name], file_path)
             try:
-                loader = loader_cls(file_full_path)
+                loader = loader_cls(file_full_path, jq_schema=jq_schema)
                 docs = loader.load()
                 documents.extend(docs)
             except Exception as e:
@@ -85,6 +85,7 @@ def create_embeddings_for_dataset(name, loader_cls):
             print(f"- {err_file}")
 
 if __name__ == "__main__":
-    create_embeddings_for_dataset("transcriptions", TextLoader)
-    create_embeddings_for_dataset("books", TextLoader)
-    # create_embeddings_for_dataset("articles", JSONLoader)
+    # create_embeddings_for_dataset("transcriptions", TextLoader)
+    # create_embeddings_for_dataset("books", TextLoader)
+    jq_schema = ".content"  # Adjust this based on your JSON structure
+    create_embeddings_for_dataset("articles", JSONLoader, jq_schema=jq_schema)

@@ -40,7 +40,7 @@ class PsychoRag:
             '''
 
             Be very careful if you don't know the answer, it's dangerous to give bad answers, just say that you don't know.
-            ALSO VERY IMPORTANT TO ANSWER IN LANGOUGE OF REQUEST!!!
+            VERY IMPORTANT TO ANSWER IN LANGUAGE OF REQUEST!!!
         """
 
         RAG_HUMAN_PROMPT = """\
@@ -114,7 +114,7 @@ class PsychoRag:
           2. Provide a few possible methods or strategies for the user to work on these issues.
           3. Maintain an empathetic, understanding tone.
           4. If there is insufficient information to conclude on something, mention that gently.
-          ALSO VERY IMPORTANT TO ANSWER IN LANGOUGE OF REQUEST!!!
+          VERY IMPORTANT TO ANSWER IN LANGUAGE OF REQUEST!!!
         """
 
         formatted_history = self._format_history(user_id)
@@ -140,7 +140,8 @@ async def main():
     # Paths to the precomputed Chroma databases
     VECTOR_DB_PATHS = {
     "transcriptions": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/transcriptions_db_2",
-    "books": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/books_db_2"
+    "books": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/books_db_2",
+    "articles": "/Users/dtikhanovskii/Documents/phycho_rag/data/vectorstore/articles_db"
     }
 
     # Initialize the PsychoRag system
