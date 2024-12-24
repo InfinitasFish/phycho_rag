@@ -166,3 +166,5 @@ cython_debug/
 *.json
 *.pdf
 dejavu-fonts-ttf-2.37/
+
+data/vectorstore/books_db_2/chroma.sqlite3
